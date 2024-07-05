@@ -43,8 +43,8 @@ public class FruitIntoBasket {
         return ans;
     }
 
-    private static void addValue(Map<Integer, Integer> hmp, int i) {
-        Integer count = hmp.getOrDefault(i, 0);
-        hmp.put(i, count + 1);
+    private static void addValue(Map<Integer, Integer> hmp, int num) {
+        Integer count = hmp.getOrDefault(num, 0);
+        hmp.put(num, count + 1);
     }
 }

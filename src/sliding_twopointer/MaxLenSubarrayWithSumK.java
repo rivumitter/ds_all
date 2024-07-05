@@ -7,6 +7,8 @@ public class MaxLenSubarrayWithSumK {
 
     public static void main(String[] args) {
 
+        // striver : https://www.youtube.com/watch?v=frf7qxiN2qU&t=1169s
+
         // https://www.geeksforgeeks.org/problems/longest-sub-array-with-sum-k0809/1
         // {1,2,3,1,1,1,1,4,2,3} k = 3 {2. 0, 0, 3 } k = 3
         int[] arr = {1,2,3,1,1,1,1,4,3,3};

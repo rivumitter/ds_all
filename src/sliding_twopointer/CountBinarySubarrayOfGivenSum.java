@@ -16,18 +16,18 @@ public class CountBinarySubarrayOfGivenSum {
     }
 
     private static int countBinarySubarrayOfGivenSum(int[] arr, int goal) {
-        int count=0, l=0, r=0, sum=0;
+        int count = 0, l = 0, r = 0, sum = 0;
 
         // check sum<=goal
-        while (r<arr.length) {
-            if(goal<0)
+        while (r < arr.length) {
+            if (goal < 0)
                 return 0;
             sum = sum + arr[r];
             while (sum > goal) {
                 sum = sum - arr[l];
                 l++;
             }
-            count = count + ( r-l)+1;
+            count = count + (r - l) + 1;
             r++;
         }
         return count;

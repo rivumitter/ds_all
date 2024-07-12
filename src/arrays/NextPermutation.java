@@ -21,19 +21,18 @@ public class NextPermutation {
 
         int i = arr.length - 2;
 
-        if(arr.length == 1)
+        if (arr.length == 1)
             return;
-        if(arr.length == 2)
-        {
+        if (arr.length == 2) {
             swap(arr, 0, 1);
             return;
         }
 
-        while (i > 0 && arr[i] >= arr[i + 1]) {
+        while (i >= 0 && arr[i] >= arr[i + 1]) {
             i--;
         }
 
-        if (i <= 0) {
+        if (i < 0) {
             Arrays.sort(arr);
             return;
         }
@@ -41,13 +40,11 @@ public class NextPermutation {
         // we need to change the i and swap it with its next bigger element;
         int el = arr[i];
 
-        int nextElIndex = -1, nextMin = Integer.MAX_VALUE;
-        for (int j = i; j < arr.length; j++) {
+        int nextElIndex = -1;
+        for (int j = arr.length - 1; j > i; j--) { // as frpm n - i its already sorted now
             if (arr[j] > el) {
-                if (arr[j] < nextMin) {
-                    nextMin = arr[j];
-                    nextElIndex = j;
-                }
+                nextElIndex = j;
+                break;
             }
         }
 

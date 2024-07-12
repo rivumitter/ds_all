@@ -15,10 +15,10 @@ public class FormBiggestNum {
 
     private static String formBiggestNum(String[] arr) {
         Comparator<String> myCompare
-                = (X, Y) -> (X + Y).compareTo(Y + X);
+                = (X, Y) -> (Y + X).compareTo(X + Y);
 
         // Sort the array using the custom comparator
-        Arrays.sort(arr, myCompare.reversed());
+        Arrays.sort(arr, myCompare);
 
         // Handle the case where all numbers are zero
         if (arr[0].equals("0")) {

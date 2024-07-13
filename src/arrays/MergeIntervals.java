@@ -9,8 +9,6 @@ public class MergeIntervals {
 
     public static void main(String[] args) {
 
-        // https://leetcode.com/problems/merge-intervals/description/
-
         int[][] arr = {{1, 3}, {2, 6}, {8, 9}, {9, 11}, {8, 10}, {2, 4}, {15, 18}, {16, 17}};
 
         int[][] ans = mergeIntervals(arr);
@@ -34,7 +32,7 @@ public class MergeIntervals {
                 li.add(Arrays.asList(arr[i][0], arr[i][1]));
             }
             else {
-              li.get(listSize -1).set(1, Math.max(li.get(listSize -1).get(1), arr[i][1]));
+                li.get(listSize -1).set(1, Math.max(li.get(listSize -1).get(1), arr[i][1]));
             }
         }
 

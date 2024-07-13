@@ -12,6 +12,7 @@ public class SortZeroOneTwo {
             System.out.print(num);
     }
 
+    // Dutch national flag
     private static void sortArr(int[] arr) {
 
         int low = 0, mid = 0, high = arr.length - 1;

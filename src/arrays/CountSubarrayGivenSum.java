@@ -36,6 +36,7 @@ public class CountSubarrayGivenSum {
             if(hmp.containsKey(remaining)) {
                 count = count+ hmp.get(remaining);
             }
+            // storing prefix sum
             putSumCount(hmp, sum);
         }
 

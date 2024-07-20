@@ -6,6 +6,8 @@ public class MinStackImpl {
 
     public static void main(String[] args) {
 
+        // https://leetcode.com/problems/min-stack/description/
+
         MinStack minStack = new MinStack();
         minStack.push(-2);
         minStack.push(0);

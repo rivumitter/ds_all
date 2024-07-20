@@ -36,14 +36,8 @@ public class NextGreaterOne {
             while (!st.empty() && num2[i] > st.peek()) {
                 st.pop();
             }
-            if (st.isEmpty()) {
-                temp[i] = -1;
-                st.push(num2[i]);
-            }
-            else {
-                temp[i] = st.peek();
-                st.push(num2[i]);
-            }
+            temp[i] = st.empty() ? -1 : st.peek();
+            st.push(num2[i]);
         }
 
         int k = 0;

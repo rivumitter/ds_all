@@ -12,15 +12,13 @@ public class StockBuyNSell {
 
     private static int stockBuyNSell(int[] arr) {
 
-        int ans = 0, minSoFar = arr[0], n = arr.length;
+        int profit = 0, minSoFar = arr[0], n = arr.length;
 
-        for (int i=1;i<n;i++) {
-            minSoFar = Math.min(minSoFar, arr[i-1]);
-            if(arr[i] - minSoFar >= 0) {
-                ans = Math.max(ans, (arr[i] - minSoFar));
-            }
+        for(int i=1;i<n;i++) {
+            int cost = arr[i] - minSoFar;
+            profit = Math.max(profit, cost);
+            minSoFar = Math.min(minSoFar, arr[i]);
         }
-
-        return ans;
+        return profit;
     }
 }

@@ -15,7 +15,7 @@ public class MajorityElement {
         int k = (int) Math.floor((double) n / 2);
 
         for(int i=0;i<n;i++) {
-            if(count==0) {
+            if(count==0) { // prev element cant be so start again
                 temp = arr[i];
                 count = 1;
             }

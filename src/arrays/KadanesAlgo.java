@@ -4,7 +4,7 @@ public class KadanesAlgo {
 
     public static void main(String[] args) {
 
-        int[] arr = {-2, -3, 4, -1, -2, 1, 5, -3};
+        int[] arr = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
 
         System.out.println(mxSum(arr));
         printMaxSumSubArray(arr);
@@ -28,27 +28,24 @@ public class KadanesAlgo {
     private static void printMaxSumSubArray(int[] arr) {
         int l = 0, r = 0, sum = 0, maxSum = Integer.MIN_VALUE;
 
-        int i = -1, j = -1;
+        int start = -1, ansStart = -1, ansEnd = -1;
 
-        while (r < arr.length) {
-            sum = sum + arr[r];
-            if (sum > maxSum) {
+        for(int i=0;i<arr.length;i++) {
+            if(sum == 0)
+                start = i;
+            sum+=arr[i];
+
+            if(sum > maxSum) {
                 maxSum = sum;
-                i = l;
-                j = r;
+                ansStart = start;
+                ansEnd = i;
             }
-            if (sum < 0) {
+            if(sum < 0) {
                 sum = 0;
-                l = r;
             }
-            r++;
         }
 
-        if (i != -1 && j != -1) {
-            for (int a = i; a <= j; a++) {
-                System.out.print(arr[a]+" ");
-            }
-
-        }
+        for(int i=ansStart;i<=ansEnd;i++)
+            System.out.print(arr[i] +" ");
     }
 }

@@ -4,6 +4,8 @@ public class LongestCommonPrefix {
 
     public static void main(String[] args) {
 
+        // https://leetcode.com/problems/longest-common-prefix/description/
+
         String[] arr = {"flower","flow","flight"};
 
         //System.out.println("abc".indexOf("abc"));

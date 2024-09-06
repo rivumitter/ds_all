@@ -7,7 +7,7 @@ public class LongestConsecutiveSequence {
 
     public static void main(String[] args) {
 
-        // https://www.geeksforgeeks.org/problems/longest-consecutive-subsequence2449/1
+        // x`
 
         int[] arr = {36, 41, 56, 35, 44, 33, 34, 92, 43, 32, 42};
 
